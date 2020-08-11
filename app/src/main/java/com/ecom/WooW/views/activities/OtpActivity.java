@@ -1,4 +1,4 @@
-package com.ecom.WooW.views;
+package com.ecom.WooW.views.activities;
 
 import android.content.Intent;
 import android.os.Bundle;
