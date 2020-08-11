@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".views.activities.Catalogue"/>
+        <activity android:name=".views.activities.add_item_catalogue"></activity>
+        <activity android:name=".views.activities.Catalogue" />
         <activity android:name=".views.activities.RegisterSeller" />
         <activity android:name=".views.activities.RegisterActivity" />
         <activity android:name=".views.activities.OtpActivity" />

@@ -8,6 +8,7 @@
         android:layout_width="120dp"
         android:layout_height="120dp"
         android:layout_marginLeft="140dp"
+        android:src="@drawable/no_profile_pic"
         android:layout_marginTop="40dp"
         android:id="@+id/item_pic"/>
     <TextView
@@ -66,14 +67,43 @@
             android:layout_width="match_parent"
             android:textColor="#1E1E1E"
             android:id="@+id/pro_avail_ET"
-            android:hint="Product Availability"
+            android:hint="Product Expiry"
             android:inputType="text"
             android:layout_height="wrap_content"/>
     </com.google.android.material.textfield.TextInputLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Availability"
+        android:textSize="25dp"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="20dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Yes"
+            android:id="@+id/pAvailYes"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="20dp"/>
+        <RadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="No"
+            android:id="@+id/pAvailNo"
+            android:textSize="20dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="30dp"/>
+    </LinearLayout>
+
     <com.google.android.material.button.MaterialButton
         android:layout_width="180dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="75dp"
+        android:layout_marginTop="55dp"
         android:id="@+id/registeredB"
         android:text="Add product"
         app:cornerRadius="10dp"
