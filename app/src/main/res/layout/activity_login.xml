@@ -1,12 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="#E6E5ED"
+    android:background="#FFFFFF"
     tools:context=".views.activities.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -97,8 +101,8 @@
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:layout_marginLeft="80dp"
-    android:layout_marginTop="40dp"
-    android:textSize="25dp"
+    android:layout_marginTop="50dp"
+    android:textSize="15dp"
     android:text="Are you a first time user?"/>
 
     <com.google.android.material.button.MaterialButton
@@ -120,12 +124,11 @@
         android:text="Register as a Seller"
         app:cornerRadius="10dp"
         android:layout_gravity="center"
-        android:textSize="10dp"
         android:backgroundTint="@color/colorPrimaryDark"
         android:textColor="#F3F2F2"
         />
 
 
 
-
-</LinearLayout>
+    </LinearLayout>
+</ScrollView>
