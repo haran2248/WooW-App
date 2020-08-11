@@ -10,13 +10,12 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ecom.WooW.R;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+
 
 public class OtpActivity extends AppCompatActivity {
 
-    FirebaseAuth mAuth;
-    FirebaseUser CurrentUser;
+//    FirebaseAuth mAuth;
+//    FirebaseUser CurrentUser;
     String mAuthCredentials;
     TextInputEditText Otp;
     Button login;
@@ -25,10 +24,10 @@ public class OtpActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-        mAuth=FirebaseAuth.getInstance();
+//        CurrentUser=mAuth.getCurrentUser();
+//        mAuth=FirebaseAuth.getInstance();
         Otp=findViewById(R.id.Otp);
         login=findViewById(R.id.login);
-        CurrentUser=mAuth.getCurrentUser();
         mAuthCredentials=getIntent().getStringExtra("AuthCredentials");
         login.setOnClickListener(new View.OnClickListener() {
             @Override

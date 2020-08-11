@@ -10,15 +10,15 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ecom.WooW.R;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseUser;
 
 public class MainActivity extends AppCompatActivity {
 TextInputEditText PhoneNo,OtpNo;
 String ph;
-FirebaseAuth mAuth;
+//FirebaseAuth mAuth;
 TextView logout;
-FirebaseUser current;
+//FirebaseUser current;
 
 
 

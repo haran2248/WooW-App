@@ -11,17 +11,17 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.ecom.WooW.R;
 import com.google.android.material.textfield.TextInputEditText;
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.PhoneAuthProvider;
+//import com.google.firebase.auth.FirebaseAuth;
+//import com.google.firebase.auth.FirebaseUser;
+//import com.google.firebase.auth.PhoneAuthProvider;
 
 public class LoginActivity extends AppCompatActivity {
 
-    FirebaseAuth firebaseAuth;
-    FirebaseUser user;
+//    FirebaseAuth firebaseAuth;
+//    FirebaseUser user;
     TextInputEditText ph,otp;
     Button genOtp,reg;
-    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
+//    private PhoneAuthProvider.OnVerificationStateChangedCallbacks mCallbacks;
     ProgressBar progressBar;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,8 +31,8 @@ public class LoginActivity extends AppCompatActivity {
         otp=findViewById(R.id.Otp);
         genOtp=findViewById(R.id.otp_btn);
         reg=findViewById(R.id.registerB);
-        firebaseAuth=FirebaseAuth.getInstance();
-        user=firebaseAuth.getCurrentUser();
+//        firebaseAuth=FirebaseAuth.getInstance();
+//        user=firebaseAuth.getCurrentUser();
         reg.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
