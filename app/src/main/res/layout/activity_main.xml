@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".views.activities.MainActivity">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="50dp"
-        android:id="@+id/logout"
-        android:layout_margin="100dp"
-        android:text="Logout"/>
+    <com.google.android.material.button.MaterialButton
+        android:layout_gravity="center"
+        android:layout_marginTop="300dp"
+        android:layout_width="105dp"
+        android:text="Logout"
+        android:textColor="#ffffff"
+        android:background="@color/colorPrimaryDark"
+        android:layout_height="35dp"/>
 
 
 </LinearLayout>
