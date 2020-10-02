@@ -6,6 +6,13 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".views.activities.MainActivity">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Welcome to Woow"
+        android:textSize="30dp"
+        android:layout_marginLeft="65dp"
+        android:id="@+id/TVV"/>
     <com.google.android.material.button.MaterialButton
         android:layout_gravity="center"
         android:layout_marginTop="300dp"
@@ -14,6 +21,4 @@
         android:textColor="#ffffff"
         android:background="@color/colorPrimaryDark"
         android:layout_height="35dp"/>
-
-
 </LinearLayout>
