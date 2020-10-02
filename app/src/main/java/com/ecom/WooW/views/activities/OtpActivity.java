@@ -6,16 +6,25 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.ecom.WooW.R;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.textfield.TextInputEditText;
+import com.google.firebase.auth.AuthResult;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseAuthInvalidCredentialsException;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.PhoneAuthCredential;
+import com.google.firebase.auth.PhoneAuthProvider;
 
 
 public class OtpActivity extends AppCompatActivity {
 
-//    FirebaseAuth mAuth;
-//    FirebaseUser CurrentUser;
+    FirebaseAuth mAuth;
+    FirebaseUser CurrentUser;
     String mAuthCredentials;
     TextInputEditText Otp;
     Button login;
@@ -24,8 +33,8 @@ public class OtpActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_otp);
-//        CurrentUser=mAuth.getCurrentUser();
-//        mAuth=FirebaseAuth.getInstance();
+        CurrentUser=mAuth.getCurrentUser();
+        mAuth=FirebaseAuth.getInstance();
         Otp=findViewById(R.id.Otp);
         login=findViewById(R.id.login);
         mAuthCredentials=getIntent().getStringExtra("AuthCredentials");
@@ -33,8 +42,8 @@ public class OtpActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 String otp=Otp.getText().toString();
-//                PhoneAuthCredential credential= PhoneAuthProvider.getCredential(mAuthCredentials,otp);
-//                signInWithPhone(credential);
+                PhoneAuthCredential credential= PhoneAuthProvider.getCredential(mAuthCredentials,otp);
+                signInWithPhone(credential);
                 if(otp.equals("1234")){
                     Intent intent=new Intent(OtpActivity.this,MainActivity.class);
                     startActivity(intent);
@@ -45,21 +54,21 @@ public class OtpActivity extends AppCompatActivity {
             }
         });
     }
-//    private void signInWithPhone(PhoneAuthCredential phoneAuthCredential){
-//        mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
-//            @Override
-//            public void onComplete(@NonNull Task<AuthResult> task) {
-//                if(task.isSuccessful()){
-//                    Intent intent=new Intent(OtpActivity.this,MainActivity.class);
-//                    startActivity(intent);
-//                }
-//                else {
-//                    if(task.getException() instanceof FirebaseAuthInvalidCredentialsException){
-//                        Toast.makeText(OtpActivity.this,"Error in Otp verification",Toast.LENGTH_LONG).show();
-//                    }
-//
-//                }
-//            }
-//        });
-//    }
+    private void signInWithPhone(PhoneAuthCredential phoneAuthCredential){
+        mAuth.signInWithCredential(phoneAuthCredential).addOnCompleteListener(new OnCompleteListener<AuthResult>() {
+            @Override
+            public void onComplete(@NonNull Task<AuthResult> task) {
+                if(task.isSuccessful()){
+                    Intent intent=new Intent(OtpActivity.this,MainActivity.class);
+                    startActivity(intent);
+                }
+                else {
+                    if(task.getException() instanceof FirebaseAuthInvalidCredentialsException){
+                        Toast.makeText(OtpActivity.this,"Error in Otp verification",Toast.LENGTH_LONG).show();
+                    }
+
+                }
+            }
+        });
+    }
 }
